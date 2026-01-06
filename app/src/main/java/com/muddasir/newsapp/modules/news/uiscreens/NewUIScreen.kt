@@ -25,14 +25,8 @@ import com.muddasir.newsapp.modules.news.viewmodel.NewsViewModel
 @Composable
 fun NewsAppScreen(newsData: UIState<GithubApiReposModel>, modifier: Modifier) {
     val newsViewModel: NewsViewModel = hiltViewModel()
-    BoxWithConstraints(modifier = Modifier
-        .statusBarsPadding()
-        .fillMaxSize()) {
-        Column(modifier = Modifier.fillMaxSize()) {
-            NewsCardItem()
 
-        }
-    }
+    SearchWithListPreview()
     // print(newsData.toString())
 }
 
