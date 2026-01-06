@@ -25,8 +25,27 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+            distribution: temurin
+            java-version: '17'
+            cache: gradle
+
+            # 3) Optional: make gradlew executable
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+
       - name : Run Lint
         run : ./gradlew lintDebug
+
+
+
+      - name: Build Debug APK
+        run: ./gradlew :app:assembleDebug
+
 
       - name: Upload html test report
         uses: actions/upload-artifact@v4
