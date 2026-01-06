@@ -10,6 +10,8 @@ UI: Jetpack Compose (Material 3)
 <br />
 Async & Data: Kotlin Coroutines + Flow
 <br />
+flow: cold flow + hot flow
+<br />
 Networking: Retrofit + OkHttp + Gson
 <br />
 Data abstraction: Use cases + datarepository
