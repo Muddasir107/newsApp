@@ -32,9 +32,11 @@ fun NewsAppScreen(newsData: UIState<GithubApiReposModel>, modifier: Modifier) {
 
 @Composable
 fun LoadingContent() {
-    BoxWithConstraints(modifier = Modifier
-        .statusBarsPadding()
-        .fillMaxSize()) {
+    BoxWithConstraints(
+        modifier = Modifier
+            .statusBarsPadding()
+            .fillMaxSize()
+    ) {
         Column(modifier = Modifier.fillMaxSize()) {
             // NewsCardItem()
         }
@@ -45,30 +47,37 @@ fun LoadingContent() {
 fun ErrorScreen() {
     val newsViewModel: NewsViewModel = hiltViewModel()
 }
+
 @Preview
 @Composable
 fun LazyColumnDemo() {
     val list = listOf(
         "A", "B", "C", "D"
     ) + ((0..5).map { it.toString() })
-    LazyColumn(modifier = Modifier.padding(horizontal = 10.dp).fillMaxHeight()) {
+    LazyColumn(modifier = Modifier
+        .padding(horizontal = 10.dp)
+        .fillMaxHeight()) {
         items(items = list, itemContent = { item ->
             Log.d("COMPOSE", "This get rendered $item")
             when (item) {
                 "A" -> {
                     Text(text = item, style = TextStyle(fontSize = 80.sp))
                 }
+
                 "B" -> {
                     Button(onClick = {}) {
                         Text(text = item, style = TextStyle(fontSize = 80.sp))
                     }
                 }
+
                 "C" -> {
                     //Do Nothing
                 }
+
                 "D" -> {
                     Text(text = item)
                 }
+
                 else -> {
                     Text(text = item, style = TextStyle(fontSize = 80.sp))
                 }

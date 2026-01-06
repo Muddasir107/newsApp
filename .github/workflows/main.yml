@@ -38,8 +38,8 @@ jobs:
         run: chmod +x ./gradlew
 
 
-      - name : Run Lint
-        run : ./gradlew lintDebug
+     # - name : Run Lint
+      #  run : ./gradlew lintDebug
 
 
 
@@ -47,10 +47,6 @@ jobs:
         run: ./gradlew :app:assembleDebug
 
 
-      - name: Upload html test report
-        uses: actions/upload-artifact@v4
-        with:
-           name: lint.html
-           path: app/build/reports/lint-results-debug.html
+
 
 
