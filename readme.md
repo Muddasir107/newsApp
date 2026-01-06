@@ -1,22 +1,23 @@
 Overview
+<br />
 A modern Android app built with:
-
+<br />
 Architecture: MVVM + Clean Architecture (UI, Domain, Data layers)
-
+<br />
 DI: Hilt for dependency injection
-
+<br />
 UI: Jetpack Compose (Material 3)
-
+<br />
 Async & Data: Kotlin Coroutines + Flow
-
-Networking: Retrofit + OkHttp + Gson 
-
+<br />
+Networking: Retrofit + OkHttp + Gson
+<br />
 Data abstraction: Use cases + datarepository
-
+<br />
 Persistence: Room
-
+<br />
 Images: Coil
-
+<br />
 Testing: JUnit, Mockito, kotlinx‑coroutines‑test, MockWebServer, Compose UI Tests
-
+<br />
 CI/CD: GitHub Actions—build, static analysis, tests, signed bundle, deploy to internal track
